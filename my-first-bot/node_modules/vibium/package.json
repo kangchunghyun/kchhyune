@@ -1,0 +1,55 @@
+{
+  "name": "vibium",
+  "version": "0.1.2",
+  "description": "Browser automation for AI agents and humans",
+  "keywords": [
+    "browser",
+    "automation",
+    "testing",
+    "webdriver",
+    "bidi",
+    "mcp",
+    "ai",
+    "claude"
+  ],
+  "author": "Jason Huggins <hugs@vibium.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://vibium.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VibiumDev/vibium.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VibiumDev/vibium/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "bin": {
+    "vibium": "./bin.js"
+  },
+  "scripts": {
+    "postinstall": "node postinstall.js"
+  },
+  "files": ["dist", "bin.js", "postinstall.js"],
+  "optionalDependencies": {
+    "@vibium/linux-x64": "0.1.2",
+    "@vibium/linux-arm64": "0.1.2",
+    "@vibium/darwin-x64": "0.1.2",
+    "@vibium/darwin-arm64": "0.1.2",
+    "@vibium/win32-x64": "0.1.2"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
